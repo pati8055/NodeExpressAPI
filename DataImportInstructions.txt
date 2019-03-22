@@ -1,1 +1,7 @@
 To import Book data into your mongoDB database. Make sure MongoDB is running then run 'mongo bookAPI < booksJson.js' from the command line.
+
+ C:\Program Files\MongoDB\Server\4.0\bin
+ 
+ mongod --dbpath C:\Nikhil\POC\servers --port 27017
+ 
+ mongo bookAPI C:\Nikhil\POC\nodeApi\booksJson.js
