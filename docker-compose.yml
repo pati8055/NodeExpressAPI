@@ -1,0 +1,33 @@
+version: '3'
+
+networks:
+     default:
+      external:
+        name: bridgeTest
+
+# Define the services/containers to be run
+services:
+  myapp: #name of your service
+    build: ./ # specify the directory of the Dockerfile
+    ports:
+      - "4916:8080" #specify ports forwarding
+    links:
+      - mongodb # link this service to the database service    
+    depends_on:
+      - mongodb   
+      
+  mongodb: # name of the service
+    image: mongo # specify image to build container fromd
+    ports:
+      - "27017:27017" #specify ports forwarding  
+    volumes:
+      - C:\Mongo:/data/    
+
+  mongo-seed:
+    build: ./mongo-seed
+    volumes:
+      - C:\Mongo:/data/
+    depends_on:
+      - mongodb
+
+  

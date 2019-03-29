@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const db = mongoose.connect('mongodb://localhost/bookAPI');
+const db = mongoose.connect('mongodb://localhost/bookAPI',{ useNewUrlParser: true });
 const Book = require('./models/bookModel');
 
 const app = express();

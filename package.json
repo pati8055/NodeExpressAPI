@@ -1,14 +1,14 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "node with express",
+  "description": "node with express and Mongo",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "npati",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -30,7 +30,7 @@
     "delay": "2500",
     "env": {
       "NODE_ENV": "development",
-      "PORT": 4000
+      "PORT": 4916
     }
   }
 }
